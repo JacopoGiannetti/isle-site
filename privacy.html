@@ -27,11 +27,11 @@
 <main>
   <span class="kicker">Isle · Legal</span>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 4 November 2026</p>
+  <p class="updated">Last updated: 12 November 2026</p>
 
   <p>This Privacy Policy explains what happens to your information when you use Isle (the "App"), a habit app where your progress grows into a living island. Isle was designed so that we never need to see what you track. Isle is offered in the United States.</p>
 
-  <div class="callout"><strong>The short version.</strong> Isle has no account and no servers of our own. Your islands — the habits you name, your daily answers, the plants and animals they grow — stay on your iPhone and, if iCloud is on, in your private iCloud, which only you can access. We never see them. To offer and manage subscriptions we use Superwall, which receives an anonymous identifier, basic device information and a few numbers (such as how many islands you have), never their names or content. To learn which of our own ads bring people to Isle we use AppsFlyer, which receives installs and purchases — and your advertising identifier only if you allow it when iOS asks. No ads in the App. We do not sell your personal information.</div>
+  <div class="callout"><strong>The short version.</strong> Isle has no account and no servers of our own. Your islands — the habits you name, your daily answers, the plants and animals they grow — stay on your iPhone and, if iCloud is on, in your private iCloud, which only you can access. We never see them. To offer and manage subscriptions we use Superwall, which receives an anonymous identifier, basic device information and a few numbers (such as how many islands you have), never their names or content. To learn which of our own ads bring people to Isle we use AppsFlyer, which receives installs and purchases — and your advertising identifier only if you allow it when iOS asks. To see where people get stuck in the first minutes of the App we use Google Firebase, which receives which introduction steps you reach and your welcome answers as fixed choices — never your name or your islands. No ads in the App. We do not sell your personal information.</div>
 
   <h2 id="who-we-are">1. Who we are</h2>
   <p>Isle is developed by Jacopo Giannetti ("we", "us"). For privacy questions and requests, write to <a href="mailto:privacy@helloisle.app">privacy@helloisle.app</a>.</p>
@@ -41,9 +41,9 @@
   <ul>
     <li><strong>iCloud.</strong> If you are signed in to iCloud, Isle also keeps a copy in your <em>private</em> iCloud database (Apple CloudKit), so your islands come back if you reinstall the App or change iPhone. That database belongs to your Apple Account: Apple encrypts it in transit and at rest, and we have no way to read it. Apple's handling of iCloud data is described in Apple's privacy policy.</li>
     <li><strong>No iCloud.</strong> If you are not signed in, or you turn iCloud off for Isle, your islands exist only on that iPhone.</li>
-    <li><strong>Nothing else.</strong> Your islands are never sent to us, to Superwall, to AppsFlyer, or to anyone else.</li>
+    <li><strong>Nothing else.</strong> Your islands are never sent to us, to Superwall, to AppsFlyer, to Google, or to anyone else.</li>
   </ul>
-  <p><strong>Welcome questions.</strong> When you first open Isle, we ask a few optional questions: your first name, how you heard about Isle, what you hope to gain, whether you have tried before and what got in the way. Your name stays on your device and is never sent anywhere. The other answers are fixed choices (for example "Save money" or "TikTok"); we use them to tailor what you see in the App, and we share them as described in §3 and §4.</p>
+  <p><strong>Welcome questions.</strong> When you first open Isle, we ask a few optional questions: your first name, how you heard about Isle, what you hope to gain and what got in the way. Your name stays on your device and is never sent anywhere. The other answers are fixed choices (for example "Save money" or "TikTok"); we use them to tailor what you see in the App, and we share them as described in §3, §4 and §5.</p>
   <p>The habits you track may say something personal about you — your health, for example, if you are quitting smoking. That is exactly why they never leave your devices and your own iCloud, and why we do not collect any sensitive personal information.</p>
 
   <h2 id="subscriptions">3. Subscriptions (Superwall)</h2>
@@ -54,7 +54,7 @@
     <li>how you interact with subscription screens (for example when one is shown or closed, and whether you buy or restore);</li>
     <li>your subscription status and App Store transaction details;</li>
     <li>a few counts used to decide which offer to show: how many islands you have, how many are habits to build or to quit, seeds earned, days since your first island, and the App's language;</li>
-    <li>your answers to the welcome questions, as fixed choices (how you heard about Isle, what you hope to gain, whether you have tried before and what got in the way), so the subscription screen can speak to them. Never your name.</li>
+    <li>your answers to the welcome questions, as fixed choices (how you heard about Isle, what you hope to gain and what got in the way), so the subscription screen can speak to them. Never your name.</li>
   </ul>
   <p>Superwall never receives the names, questions or answers of your habits. <strong>Payments</strong> are processed by Apple: we never receive your card details.</p>
 
@@ -67,43 +67,57 @@
     <li>device and app information: device model, iOS version, language, approximate location (country or region) derived from your IP address, app version, and Apple's identifier for vendors (IDFV).</li>
   </ul>
   <p><strong>Tracking.</strong> After the introduction, iOS asks whether you allow Isle to track you (App Tracking Transparency). <strong>If you allow it</strong>, AppsFlyer also receives your device's advertising identifier (IDFA) and shares install and subscription events with the advertising platforms where we run our ads (such as Meta), only to measure which ad brought you to Isle. <strong>If you decline</strong>, the IDFA is never collected, and measurement relies only on Apple's privacy-preserving aggregate reporting (SKAdNetwork), which does not identify you. You can change your choice at any time in <strong>Settings → Privacy &amp; Security → Tracking</strong>.</p>
-  <p>AppsFlyer and the advertising platforms never receive your islands, the names of your habits, or your answers.</p>
+  <p>AppsFlyer and the advertising platforms never receive your islands, the names of your habits, or your daily answers.</p>
 
-  <h2 id="notifications">5. Notifications</h2>
+  <h2 id="onboarding-statistics">5. Improving the introduction (Google Firebase)</h2>
+  <p>To understand where people stop during the introduction and improve it, Isle uses <a href="https://firebase.google.com/support/privacy">Google Firebase</a> (Firebase Authentication and Cloud Firestore). This happens only on a new installation that starts the introduction without islands. Firebase receives:</p>
+  <ul>
+    <li>a random identifier created by Firebase for that installation (an anonymous sign-in), not linked to your name, email or Apple Account;</li>
+    <li>the time you first reach each step of the introduction (for example the tour, each welcome question, the pact, creating your first island, meeting your first animal and seeing the subscription screen), and the date you subscribe, if you do;</li>
+    <li>your answers to the welcome questions, as fixed choices (how you heard about Isle, what you hope to gain and what got in the way), and whether you allowed notifications and tracking. Never your name;</li>
+    <li>the kind of your first island (to build or to quit), its rhythm and its world. Never its name or its question;</li>
+    <li>app version, iOS version, the App's language and your region setting; like any web service, Google also receives your IP address when the App connects.</li>
+  </ul>
+  <p>This record is used only by us, to measure the introduction. It is not used for advertising and is not shared with Superwall, AppsFlyer or advertising platforms. Firebase never receives your islands, the names of your habits, or your daily answers.</p>
+
+
+  <h2 id="notifications">6. Notifications</h2>
   <p>Reminders are scheduled on your iPhone by the App itself. There is no notification server: nothing about your reminders or habits is sent anywhere. You can turn notifications on or off at any time in iPhone Settings.</p>
 
-  <h2 id="what-we-do-not-do">6. What we do not do</h2>
-  <p>The App shows no ads. We do not sell your personal information, and we do not track you across apps or websites unless you allow it as described in §4. There is no analytics or crash-reporting service besides those described in §3 and §4. Isle does not access your location services, contacts, camera, photos or health data. If you have chosen in iOS Settings to share analytics with developers, Apple may provide us with aggregated crash reports — that is Apple's mechanism and you control it there. Ratings you leave through the in-app prompt are handled entirely by Apple.</p>
+  <h2 id="what-we-do-not-do">7. What we do not do</h2>
+  <p>The App shows no ads. We do not sell your personal information, and we do not track you across apps or websites unless you allow it as described in §4. There is no analytics or crash-reporting service besides those described in §3, §4 and §5. Isle does not access your location services, contacts, camera, photos or health data. If you have chosen in iOS Settings to share analytics with developers, Apple may provide us with aggregated crash reports — that is Apple's mechanism and you control it there. Ratings you leave through the in-app prompt are handled entirely by Apple.</p>
 
-  <h2 id="providers">7. Who receives information</h2>
+  <h2 id="providers">8. Who receives information</h2>
   <div class="table"><table>
     <thead><tr><th>Recipient</th><th>Why</th><th>What it receives</th></tr></thead>
     <tbody>
       <tr><td>Apple</td><td>App Store, purchases, iCloud storage</td><td>Purchase data; your islands, in your private iCloud</td></tr>
       <tr><td>Superwall (service provider)</td><td>Subscription offers and purchase handling</td><td>The information listed in §3</td></tr>
       <tr><td>AppsFlyer (service provider)</td><td>Install attribution and ad measurement</td><td>The information listed in §4</td></tr>
+      <tr><td>Google (Firebase, service provider)</td><td>Measuring and improving the introduction</td><td>The information listed in §5</td></tr>
       <tr><td>Advertising platforms (such as Meta)</td><td>Measuring our own ads</td><td>Install and subscription events from AppsFlyer, with the IDFA — only if you allowed tracking</td></tr>
     </tbody>
   </table></div>
   <p>We may also disclose information if required by law, or to protect the rights and safety of our users and of Isle.</p>
 
-  <h2 id="retention">8. How long information is kept</h2>
+  <h2 id="retention">9. How long information is kept</h2>
   <ul>
     <li><strong>Your islands:</strong> until you delete them. Deleting the App removes the copy on that iPhone; the iCloud copy stays so you can get your islands back.</li>
     <li><strong>Subscription data at Superwall:</strong> for as long as needed to provide subscriptions and keep records of purchases.</li>
     <li><strong>Attribution data at AppsFlyer:</strong> for as long as needed to measure our campaigns, according to AppsFlyer's retention policy.</li>
+    <li><strong>Introduction statistics at Google Firebase:</strong> for as long as needed to measure and improve the introduction, or until you ask us to delete them.</li>
     <li><strong>Records required by law</strong> (for example transaction records): as long as legally required.</li>
   </ul>
 
-  <h2 id="choices">9. Your choices</h2>
+  <h2 id="choices">10. Your choices</h2>
   <ul>
-    <li><strong>Delete everything.</strong> In the App, go to <strong>Settings → Delete all data</strong>. This erases your islands from your iPhone and from your iCloud, and resets the anonymous identifier used by Superwall, so nothing that follows is linked to what came before. It cannot be undone. You can also remove Isle's iCloud data from iPhone Settings, under your name → iCloud → Manage Storage.</li>
+    <li><strong>Delete everything.</strong> In the App, go to <strong>Settings → Delete all data</strong>. This erases your islands from your iPhone and from your iCloud, and resets the anonymous identifier used by Superwall, so nothing that follows is linked to what came before. It cannot be undone. It does not remove the introduction statistics described in §5: to have those deleted, write to <a href="mailto:privacy@helloisle.app">privacy@helloisle.app</a>. You can also remove Isle's iCloud data from iPhone Settings, under your name → iCloud → Manage Storage.</li>
     <li><strong>Tracking.</strong> Turn it off at any time in <strong>Settings → Privacy &amp; Security → Tracking</strong>.</li>
     <li><strong>Notifications.</strong> Turn them off in iPhone Settings.</li>
     <li><strong>Subscription.</strong> It is billed by Apple: deleting your data or the App does not cancel it. Manage or cancel it in <strong>Settings → Apple Account → Subscriptions</strong>.</li>
   </ul>
 
-  <h2 id="california">10. Your California privacy rights (CCPA/CPRA)</h2>
+  <h2 id="california">11. Your California privacy rights (CCPA/CPRA)</h2>
   <p>If you are a California resident, the California Consumer Privacy Act, as amended by the California Privacy Rights Act, gives you the rights below. This section is also our notice at collection.</p>
 
   <h3>Personal information we collect</h3>
@@ -111,13 +125,13 @@
   <div class="table"><table>
     <thead><tr><th>Category</th><th>Examples</th><th>Disclosed for a business purpose to</th><th>Shared for cross-context behavioral advertising</th></tr></thead>
     <tbody>
-      <tr><td>Identifiers</td><td>Superwall's anonymous identifier, IDFV, IP address; IDFA only if you allow tracking</td><td>Superwall, AppsFlyer</td><td>Only if you allow tracking, with advertising platforms via AppsFlyer</td></tr>
+      <tr><td>Identifiers</td><td>Superwall's and Firebase's anonymous identifiers, IDFV, IP address; IDFA only if you allow tracking</td><td>Superwall, AppsFlyer, Google (Firebase)</td><td>Only if you allow tracking, with advertising platforms via AppsFlyer</td></tr>
       <tr><td>Commercial information</td><td>Subscriptions, trials and renewals</td><td>Superwall, AppsFlyer</td><td>Only if you allow tracking, with advertising platforms via AppsFlyer</td></tr>
-      <tr><td>Internet or other electronic network activity</td><td>Install, first opening, subscription screens you see, steps such as creating your first island</td><td>Superwall, AppsFlyer</td><td>Only if you allow tracking, with advertising platforms via AppsFlyer</td></tr>
+      <tr><td>Internet or other electronic network activity</td><td>Install, first opening, subscription screens you see, steps such as creating your first island</td><td>Superwall, AppsFlyer, Google (Firebase)</td><td>Only if you allow tracking, with advertising platforms via AppsFlyer</td></tr>
       <tr><td>Geolocation data</td><td>Approximate country or region derived from IP address (never precise location)</td><td>Superwall, AppsFlyer</td><td>No</td></tr>
     </tbody>
   </table></div>
-  <p>We do not collect sensitive personal information, and we do not use personal information to make inferences about you. We use the information above for the purposes described in §3 and §4, and keep it for the periods in §8.</p>
+  <p>We do not collect sensitive personal information, and we do not use personal information to make inferences about you. We use the information above for the purposes described in §3, §4 and §5, and keep it for the periods in §9.</p>
 
   <h3>Sale and sharing</h3>
   <p>We do not sell personal information for money. When you allow tracking on your iPhone, sending install and subscription events with your advertising identifier to advertising platforms may count as "sharing" for cross-context behavioral advertising under California law. We do not knowingly sell or share the personal information of consumers under 16.</p>
@@ -136,19 +150,19 @@
   <h3>Other U.S. states</h3>
   <p>Residents of other states with comprehensive privacy laws (such as Virginia, Colorado, Connecticut, Texas and Oregon) may have similar rights, including the rights to access, correct and delete personal information and to opt out of targeted advertising. You can exercise them the same way, at <a href="mailto:privacy@helloisle.app">privacy@helloisle.app</a>. If we deny your request, you may appeal by replying to our answer with the subject "Appeal"; if the appeal is denied, you may contact your state attorney general.</p>
 
-  <h2 id="children">11. Children (COPPA)</h2>
+  <h2 id="children">12. Children (COPPA)</h2>
   <p>Isle is not directed to children under 13, and we do not knowingly collect personal information from children under 13, in line with the Children's Online Privacy Protection Act. If we learn that we have collected personal information from a child under 13, we will delete it. If you are a parent or guardian and believe your child has provided us with personal information, write to <a href="mailto:privacy@helloisle.app">privacy@helloisle.app</a>.</p>
 
-  <h2 id="security">12. Security</h2>
-  <p>Your islands are protected by your device and by Apple's iCloud security. Information sent to Superwall and AppsFlyer travels over encrypted connections. No system is perfectly secure, but we take reasonable measures to protect your information.</p>
+  <h2 id="security">13. Security</h2>
+  <p>Your islands are protected by your device and by Apple's iCloud security. Information sent to Superwall, AppsFlyer and Google Firebase travels over encrypted connections. No system is perfectly secure, but we take reasonable measures to protect your information.</p>
 
-  <h2 id="location">13. Where information is processed</h2>
-  <p>Isle is offered in the United States. Superwall, AppsFlyer, the advertising platforms and Apple process information in the United States and may also process it in other countries, under safeguards required by applicable law.</p>
+  <h2 id="location">14. Where information is processed</h2>
+  <p>Isle is offered in the United States. Superwall, AppsFlyer, Google, the advertising platforms and Apple process information in the United States and may also process it in other countries, under safeguards required by applicable law.</p>
 
-  <h2 id="changes">14. Changes to this policy</h2>
+  <h2 id="changes">15. Changes to this policy</h2>
   <p>We may update this Privacy Policy from time to time. If changes are significant, we will let you know in the App. The date at the top always reflects the current version.</p>
 
-  <h2 id="contact">15. Contact</h2>
+  <h2 id="contact">16. Contact</h2>
   <p>Privacy questions and requests: <a href="mailto:privacy@helloisle.app">privacy@helloisle.app</a><br>Everything else: <a href="mailto:support@helloisle.app">support@helloisle.app</a></p>
 </main>
 
